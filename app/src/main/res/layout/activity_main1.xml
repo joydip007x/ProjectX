@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="449dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_act_logo5"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signin1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="-10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UserEmail"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ma_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                app:errorEnabled="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:hint="Password"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            app:endIconMode="password_toggle"
+            app:helperTextEnabled="true"
+            app:startIconDrawable="@drawable/ic_baseline_fingerprint_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ma_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/ma_sign"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="162dp"
+            android:layout_marginEnd="170dp"
+            android:layout_marginBottom="97dp"
+            android:text="Sign in"
+            android:textColor="@android:color/black" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="193dp"
+            android:layout_marginBottom="165dp" />
+
+        <Button
+            android:id="@+id/ma_forgot"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="215dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="185dp"
+            android:layout_marginBottom="216dp"
+            android:text="Forgot password?" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ma_reg"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="398dp"
+        android:text="Register"
+        app:icon="@drawable/ic_baseline_add_24" />
+
+
+</RelativeLayout>
