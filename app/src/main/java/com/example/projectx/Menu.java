@@ -31,8 +31,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import static com.example.projectx.UtilitiesX.startLoading;
-
 public class Menu extends Fragment {
 
     private Button buttoncfu,buttoncad, buttonrap;
@@ -91,7 +89,7 @@ public class Menu extends Fragment {
         mainAdapter= new MainAdapter(getContext());
         expandableListView.setAdapter(mainAdapter);
 
-        alertDialog=startLoading(v,alertDialog);
+       // alertDialog=startLoading(v,alertDialog);
        /// System.out.println("LAAAL  here "+ UtilitiesX.UID);
 
         readData(db, new OnGetDataListener() {
@@ -99,7 +97,7 @@ public class Menu extends Fragment {
             @Override
             public void onSuccess(String reg) {
                 initListData(0, reg);
-                alertDialog.dismiss();
+                //alertDialog.dismiss();
             }
 
             @Override

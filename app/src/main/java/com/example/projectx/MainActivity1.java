@@ -102,9 +102,9 @@ public class MainActivity1 extends AppCompatActivity {
                     Toasty.success(MainActivity1.this, "Logged in !", Toast.LENGTH_SHORT, true).show();
                     UtilitiesX.UID=FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
                     Intent i=new Intent(  MainActivity1.this, NavigationHolder.class);
+                    UtilitiesX.CheckProfile();
                     i= UtilitiesX.CloseAllPreviousCallStack(i);
                     startActivity(i);
-
 
                 }
                 else {

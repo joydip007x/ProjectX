@@ -16,7 +16,7 @@ public class AddItemToCart extends AppCompatActivity {
 
 
     Button log;
-    TextInputEditText foodname,price,catergory;
+    TextInputEditText foodname,price,catergory,desc;
     SingleFoodMenuItem fdb;
     String postUID;
     private DatabaseReference databaseReference;
@@ -30,6 +30,7 @@ public class AddItemToCart extends AppCompatActivity {
         price=findViewById(R.id.aitc_price);
         log=findViewById(R.id.aitc_sign);
         catergory=findViewById(R.id.aitc_cat);
+        desc=findViewById(R.id.aitc_catdesc);
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,7 @@ public class AddItemToCart extends AppCompatActivity {
                  String food=foodname.getText().toString();
                  String pri= (price.getText().toString());
                  String cat=catergory.getText().toString();
+                 String desc2=desc.getText().toString();
                  postUID=FirebaseDatabase.getInstance().getReference("Restaurant").child(UtilitiesX.UID)
                         .child("FoodMenu")
                         .push().getKey().toString();
@@ -47,9 +49,8 @@ public class AddItemToCart extends AppCompatActivity {
                  fdb.addSingleItem("Price",pri);
                  fdb.addSingleItem("Category",cat);
                  fdb.addSingleItem("postUID",postUID);
-
-
-
+                 fdb.addSingleItem("Desc",desc2);
+                 
                 databaseReference= FirebaseDatabase.getInstance().getReference().child("Restaurant").child(UtilitiesX.UID).child("FoodMenu").child(postUID);
                 databaseReference.setValue(fdb.getMenucard());
 

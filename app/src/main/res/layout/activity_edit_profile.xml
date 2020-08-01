@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/IVadp"
+                    android:id="@+id/IVadpx"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
@@ -31,10 +31,11 @@
                     android:padding="5dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/restaurant"
-                    tools:ignore="ContentDescription,RtlHardcoded" />
+                    tools:ignore="ContentDescription,RtlHardcoded"
+                    />
 
                 <ImageView
-                    android:id="@+id/IVadp2"
+                    android:id="@+id/IVadp2x"
                     android:layout_width="61dp"
                     android:layout_height="82dp"
                     android:layout_alignEnd="@+id/IVadp"
@@ -42,7 +43,6 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="346dp"
                     android:layout_marginLeft="139dp"
-                    android:visibility="gone"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="0dp"
                     android:scaleType="fitEnd"
@@ -57,15 +57,15 @@
 
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/TVaAgencyName"
+                <EditText
+                    android:id="@+id/TVaAgencyNamex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:inputType="textNoSuggestions"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="5dp"
-                    android:hint="Restaurant name"
+                    android:background="@drawable/edit_text_highlight"
+                    android:hint="agency name"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:textAlignment="center"
@@ -76,7 +76,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/TVaOwnerName1"
+                    android:id="@+id/TVaOwnerName1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -87,21 +87,21 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/TVaOwnerName"
+                <EditText
+                    android:id="@+id/TVaOwnerNamex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="5dp"
-                    android:inputType="text|textNoSuggestions"
+                    android:inputType="text"
                     android:textColor="#000000"
+                    android:background="@drawable/edit_text_highlight"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/TVaAddress1"
+                    android:id="@+id/TVaAddress1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -112,20 +112,21 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/TVaAddress"
+                <EditText
+                    android:id="@+id/TVaAddressx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="5dp"
-                    android:inputType="text|textNoSuggestions"
+                    android:inputType="text"
                     android:textColor="#000000"
+                    android:background="@drawable/edit_text_highlight"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/TVaDescription1"
+                    android:id="@+id/TVaDescription1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -137,22 +138,22 @@
                     android:textStyle="bold"
                     android:visibility="visible" />
 
-                <TextView
-                    android:id="@+id/TVaDescription"
+                <EditText
+                    android:id="@+id/TVaDescriptionx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="1dp"
-
                     android:inputType="textLongMessage"
+                    android:background="@drawable/edit_text_highlight"
                     android:textColor="#000000"
                     android:textSize="20dp"
                     android:visibility="visible" />
 
                 <TextView
-                    android:id="@+id/TVaNumber1"
+                    android:id="@+id/TVaNumber1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -163,8 +164,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/TVaNumber"
+                <EditText
+                    android:id="@+id/TVaNumberx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -172,11 +173,12 @@
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="5dp"
                     android:inputType="phone"
+                    android:background="@drawable/edit_text_highlight"
                     android:textColor="#000000"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/TVaEmail1"
+                    android:id="@+id/TVaEmail1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -187,20 +189,21 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/TVaEmail"
+                <EditText
+                    android:id="@+id/TVaEmailx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="1dp"
+                    android:background="@drawable/edit_text_highlight"
                     android:layout_marginEnd="5dp"
                     android:inputType="textEmailAddress"
                     android:textColor="#000000"
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/buttonCAT"
+                    android:id="@+id/buttonCATx"
                     android:layout_width="193dp"
                     android:layout_height="74dp"
                     android:layout_gravity="bottom|right"
@@ -216,17 +219,18 @@
 
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/textView2"
+                        android:id="@+id/textView2x"
+                        style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_gravity="center_vertical"
                         android:layout_marginTop="9dp"
-                        android:layout_marginEnd="99dp"
+                        android:layout_marginEnd="160dp"
                         android:layout_marginBottom="32dp"
                         android:forceHasOverlappingRendering="true"
-                        android:text="Edit Details"
+                        android:text="Submit"
                         android:textAlignment="textEnd"
                         android:textSize="20dp"
                         android:textStyle="bold"

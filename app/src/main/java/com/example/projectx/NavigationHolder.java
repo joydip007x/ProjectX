@@ -47,7 +47,6 @@ public class NavigationHolder extends AppCompatActivity {
         sNavigationDrawer.setOnMenuItemClickListener(new SNavigationDrawer.OnMenuItemClickListener() {
             @Override
             public void onMenuItemClicked(int position) {
-                System.out.println("Position "+position);
 
                 switch (position){
                     case 0:{
@@ -82,7 +81,6 @@ public class NavigationHolder extends AppCompatActivity {
 
                     @Override
                     public void onDrawerClosing(){
-                        System.out.println("Drawer closed");
 
                         try {
                             fragment = (Fragment) fragmentClass.newInstance();
@@ -103,7 +101,6 @@ public class NavigationHolder extends AppCompatActivity {
 
                     @Override
                     public void onDrawerStateChanged(int newState) {
-                        System.out.println("State 3434"+newState);
                     }
                 });
             }

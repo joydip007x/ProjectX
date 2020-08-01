@@ -6,16 +6,23 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class UtilitiesX {
 
-    static String UID;
+    static String UID,DP="https://firebasestorage.googleapis.com/v0/b/projectx-a026c.appspot.com/o/Restaurant%20Profile%20pictures%2FXyHd5RK0pJejWs00a5kiz51BVaf1.jpg?alt=media&token=3ae26079-80f1-4a1f-b61c-283c25a46dda";
+
     static void showError(String Err, Context context){
 
         new MaterialAlertDialogBuilder(context, R.style.AlertDialogTheme)
@@ -80,6 +87,35 @@ class UtilitiesX {
         alertDialog.setView(view);
         alertDialog.show();
         return alertDialog;
+    }
+    static  void CheckProfile(){
+
+        DatabaseReference d=FirebaseDatabase.getInstance().getReference().child("Restaurant")
+                .child(UtilitiesX.UID).child("Profile");
+
+        d.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+
+                if(snapshot.exists()) return;
+                ProfileModelClass p=new ProfileModelClass();
+                p.setAddress("N/A");
+                p.setNumber("N/A");
+                p.setOwnerName("N/A");
+                p.setDes("N/A");
+                p.setEmail("N/A");
+                p.setDP(DP);
+                p.setResName("Scrolldown to Edit details");
+                FirebaseDatabase.getInstance().getReference().child("Restaurant")
+                        .child(UtilitiesX.UID).child("Profile").setValue(p.getMyprf());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+
+        });
     }
 }
 

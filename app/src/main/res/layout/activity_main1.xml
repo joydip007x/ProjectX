@@ -12,16 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
-
         android:layout_marginBottom="449dp">
 
 
-        <ImageView
+
+            <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Large.PulseRing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/main_act_logo5"
-            android:scaleType="centerCrop" />
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorAccent"
+            />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:textAppearance="@font/qucisand"
+            android:text="Joldi Cook"
+            android:textSize="25sp"
+        />
+
 
     </RelativeLayout>
 
@@ -29,6 +44,7 @@
         android:id="@+id/signin1"
         android:layout_width="match_parent"
         android:layout_height="510dp"
+        android:background="@color/colorAccent"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="276dp"

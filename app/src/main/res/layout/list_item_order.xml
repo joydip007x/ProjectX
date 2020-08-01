@@ -80,14 +80,24 @@
             android:layout_height="match_parent"
             android:layout_gravity="end|center"
             android:paddingRight="25sp"
-            >
+            android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/li_cart_order"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 >
             </ImageButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/li_cart_order2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="See Details"
+                android:fontFamily="@font/qucisand"
+                >
+            </com.google.android.material.button.MaterialButton>
+
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
