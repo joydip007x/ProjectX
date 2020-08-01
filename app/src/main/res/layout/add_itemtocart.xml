@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:paddingTop="200dp"
+    >
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+
+        android:hint="Item Name"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_fastfood_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aitc_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:errorEnabled="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/outlinedTextField"
+        android:layout_marginTop="70dp"
+        android:hint="Price"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:helperTextEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aitc_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField8989"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/outlinedTextField"
+        android:layout_marginTop="148dp"
+        android:hint="Category"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:helperTextEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_category_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aitc_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/aitc_sign"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="118dp"
+        android:layout_height="59dp"
+        android:layout_alignTop="@+id/outlinedTextField"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="159dp"
+        android:text="Add"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

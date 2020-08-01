@@ -28,10 +28,9 @@ public class NavigationHolder extends AppCompatActivity {
 
         menuItems.add(new MenuItem("Menu",R.drawable.news_bg));
         menuItems.add(new MenuItem("Profile",R.drawable.feed_bg));
-        menuItems.add(new MenuItem("Setting",R.drawable.message_bg));
-        menuItems.add(new MenuItem("Log-Out",R.drawable.music_bg));
+        menuItems.add(new MenuItem("Orders",R.drawable.message_bg));
+        menuItems.add(new MenuItem("Riders Management",R.drawable.music_bg));
 
-        //then add them to navigation drawer
 
         sNavigationDrawer.setMenuItemList(menuItems);
         fragmentClass =  Menu.class;
@@ -60,11 +59,11 @@ public class NavigationHolder extends AppCompatActivity {
                         break;
                     }
                     case 2:{
-                        fragmentClass = Settings.class;
+                        fragmentClass = Orders.class;
                         break;
                     }
                     case 3:{
-                        //  fragmentClass = MusicFragment.class;
+                          fragmentClass = RiderManagement.class;
                         break;
                     }
 

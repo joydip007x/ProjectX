@@ -99,13 +99,9 @@
             android:layout_width="118dp"
             android:layout_height="59dp"
             android:layout_below="@+id/outlinedTextField2"
-            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="149dp"
             android:layout_marginTop="102dp"
             android:layout_marginEnd="154dp"
-            android:layout_marginBottom="115dp"
             android:text="Sign in"
             android:textColor="@android:color/black" />
 
@@ -116,10 +112,8 @@
             android:layout_height="34dp"
             android:layout_below="@+id/outlinedTextField"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="190dp"
-            android:layout_marginBottom="152dp" />
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="184dp" />
 
         <Button
             android:id="@+id/ma_forgot"

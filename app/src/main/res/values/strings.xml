@@ -2,4 +2,22 @@
     <string name="app_name">ProjectX</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="G1">G1</string>
+    <string name="G2">G2</string>
+    <string name="G3">G3</string>
+    <string name="G4">G4</string>
+
+    <string-array name="group1">
+        <item>itrmmmm</item>
+        <item>itrmmmm</item>
+    </string-array>
+    <string-array name="group2">
+        <item>dasdsad</item>
+        <item>dasdsad</item>
+    </string-array>
+    <string-array name="group3">
+        <item>immyjyujmm</item>
+    </string-array>
 </resources>

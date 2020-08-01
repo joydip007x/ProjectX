@@ -28,7 +28,6 @@ public class MainActivity1 extends AppCompatActivity {
     TextInputEditText username,pass;
     FirebaseAuth auth;
     String email,password;
-    static String UID="";
 
     ProgressBar progressBar;
     @Override
@@ -57,14 +56,14 @@ public class MainActivity1 extends AppCompatActivity {
                  email=username.getText().toString().trim();
                  password=pass.getText().toString().trim();
 
-                if(!Utilities.isEmailValid(email)){
+                if(!UtilitiesX.isEmailValid(email)){
 
                     username.setText(" ");
                     username.setError("Invalid mail");
                     return;
                 }
                 if(password.length()<8){
-                    Utilities.showError("Password length must be 8 character long ",MainActivity1.this);
+                    UtilitiesX.showError("Password length must be 8 character long ",MainActivity1.this);
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
@@ -101,15 +100,16 @@ public class MainActivity1 extends AppCompatActivity {
                 if(task.isSuccessful()){
 
                     Toasty.success(MainActivity1.this, "Logged in !", Toast.LENGTH_SHORT, true).show();
-                    UID=FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    UtilitiesX.UID=FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
                     Intent i=new Intent(  MainActivity1.this, NavigationHolder.class);
-                    i=Utilities.CloseAllPreviousCallStack(i);
+                    i= UtilitiesX.CloseAllPreviousCallStack(i);
                     startActivity(i);
 
 
                 }
                 else {
                     Toasty.error(MainActivity1.this, "Error:"+task.getException().getMessage(), Toast.LENGTH_SHORT, true).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
         });

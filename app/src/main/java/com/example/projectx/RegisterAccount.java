@@ -1,14 +1,14 @@
 package com.example.projectx;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -53,11 +53,11 @@ public class RegisterAccount extends AppCompatActivity {
                     return;
                 }
                 if(password.length()<8){
-                    Utilities.showError("Password length must be 8 character long ",RegisterAccount.this);
+                    UtilitiesX.showError("Password length must be 8 character long ",RegisterAccount.this);
                     return;
                 }
-                if( !Utilities.isPhoneValid(tele) || tele.length()>11 ){
-                    Utilities.showError("Incorrect Phone info",RegisterAccount.this);
+                if( !UtilitiesX.isPhoneValid(tele) || tele.length()>11 ){
+                    UtilitiesX.showError("Incorrect Phone info",RegisterAccount.this);
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
@@ -78,10 +78,11 @@ public class RegisterAccount extends AppCompatActivity {
 
                     Toasty.success(RegisterAccount.this, "Registered!", Toast.LENGTH_SHORT, true).show();
                     Intent i=new Intent(  RegisterAccount.this, MainActivity1.class);
-                    i=Utilities.CloseAllPreviousCallStack(i);
+                    i= UtilitiesX.CloseAllPreviousCallStack(i);
                     startActivity(i);
                 }
                 else {
+                    progressBar.setVisibility(View.INVISIBLE);
                     Toasty.error(RegisterAccount.this, "Error:"+task.getException().getMessage(), Toast.LENGTH_SHORT, true).show();
                 }
             }

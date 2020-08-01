@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.projectx">
 
     <application
@@ -9,8 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavigationHolder"></activity>
-        <activity android:name=".Profile" />
+        <activity android:name=".RiderManagement"></activity>
+        <activity android:name=".RiderRegister" />
+        <activity android:name=".EmptyDemo" />
+        <activity android:name=".NavigationHolder" />
+        <activity android:name=".AddItemToCart" />
         <activity android:name=".ForgotPass" />
         <activity android:name=".RegisterAccount" />
         <activity android:name=".MainActivity1">

@@ -37,7 +37,7 @@ public class ForgotPass extends AppCompatActivity {
 
                 String email=username.getText().toString().trim();
 
-                if(!Utilities.isEmailValid(email)){
+                if(!UtilitiesX.isEmailValid(email)){
                     username.setText(" ");
                     username.setError("Invalid mail");
                     return;
