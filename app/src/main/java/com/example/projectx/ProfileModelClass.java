@@ -24,7 +24,7 @@ public class ProfileModelClass {
     public void setNumber(String s){
           myprf.put("Number",s);
     }
-    public void setEmail(String s){
+    public void setTime(String s){
           myprf.put("Email",s);
     }
     public void setDes(String s){
@@ -48,7 +48,7 @@ public class ProfileModelClass {
     public String getNumber(){
         return myprf.get("Number").toString();
     }
-    public String getEmail( ){
+    public String getTime( ){
          return myprf.get("Email").toString();
     }
     public String getDes( ){

@@ -45,7 +45,7 @@ public class EditProfile extends AppCompatActivity {
 
         TVownerName.setText(prof.getOwnerName());
         TVnumber.setText(prof.getNumber());
-        TVemail.setText(prof.getEmail());
+        TVemail.setText(prof.getTime());
         TVdescription.setText(prof.getDes());
         TVaddress.setText(prof.getAddress());
         adaTV.setText(prof.getResName());
@@ -66,7 +66,7 @@ public class EditProfile extends AppCompatActivity {
                         p.setNumber(TVnumber.getText().toString());
                         p.setOwnerName(TVownerName.getText().toString());
                         p.setDes(TVdescription.getText().toString());
-                        p.setEmail(TVemail.getText().toString());
+                        p.setTime(TVemail.getText().toString());
                         p.setDP(DP);
                         p.setResName(adaTV.getText().toString());
                         FirebaseDatabase.getInstance().getReference().child("Restaurant")

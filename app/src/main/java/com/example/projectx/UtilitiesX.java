@@ -103,7 +103,7 @@ class UtilitiesX {
                 p.setNumber("N/A");
                 p.setOwnerName("N/A");
                 p.setDes("N/A");
-                p.setEmail("N/A");
+                p.setTime("N/A");
                 p.setDP(DP);
                 p.setResName("Scrolldown to Edit details");
                 FirebaseDatabase.getInstance().getReference().child("Restaurant")

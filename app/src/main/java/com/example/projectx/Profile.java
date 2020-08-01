@@ -61,7 +61,7 @@ public class Profile extends Fragment {
 
                 TVownerName.setText(prof.getOwnerName());
                 TVnumber.setText(prof.getNumber());
-                TVemail.setText(prof.getEmail());
+                TVemail.setText(prof.getTime());
                 TVdescription.setText(prof.getDes());
                 TVaddress.setText(prof.getAddress());
                 adaTV.setText(prof.getResName());
