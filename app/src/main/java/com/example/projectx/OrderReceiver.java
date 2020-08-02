@@ -31,6 +31,8 @@ public class OrderReceiver {
             else p=p.concat( ",").concat(q.get("first").toString()).concat(" and...");
         }
         System.out.println("LAAL "+p);
+        int len=17
+        if(p.length()>len)p=p.substring(0,len-1).concat("...");
         return p;
     }
 
