@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="10dp"
+    android:background="@color/colorAccent"
     tools:context=".Menu">
 
 
@@ -27,15 +28,15 @@
             android:id="@+id/extended_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorAccent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            app:strokeColor="@color/Black"
-            app:rippleColor="@color/Black"
-            app:strokeWidth="1dp"
+            app:strokeColor="@color/White"
+            app:strokeWidth="2dp"
             android:backgroundTint="@color/White"
             android:layout_marginBottom="18dp"
             android:text="Add Item"

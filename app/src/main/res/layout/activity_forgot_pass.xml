@@ -6,29 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".ForgotPass">
 
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Small.PulseRing"
+        android:layout_width="45dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="282dp"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Small.WanderingCubes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="109dp"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Small.DoubleBounce"
+        android:layout_width="71dp"
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="594dp"
+        android:layout_marginEnd="39dp"
+        app:SpinKit_Color="@color/colorAccent" />
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:paddingTop="100dp"
-        >
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="251dp"
+        android:background="@color/colorAccent"
+        android:paddingTop="100dp">
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your Email"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:boxStrokeColor="@color/White"
+            app:boxStrokeWidth="2dp"
+
+            >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
                 android:id="@+id/fp_email"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
+                android:textColor="@color/Black"
                 android:inputType="textEmailAddress"
-                />
+                android:paddingLeft="50dp"
+
+                android:paddingRight="50dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -39,7 +81,9 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="146dp"
             android:layout_marginBottom="41dp"
-            android:text="Submit" />
+            android:backgroundTint="@color/White"
+            android:text="Submit"
+            android:textColor="@color/Black" />
 
     </RelativeLayout>
 

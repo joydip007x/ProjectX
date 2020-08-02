@@ -1,6 +1,7 @@
 package com.example.projectx;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -23,6 +25,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     Button reg;
     TextInputEditText username,pass,phone;
+    TextInputLayout f1;
     FirebaseAuth auth;
     String email,password,tele;
     ProgressBar progressBar;
@@ -37,8 +40,11 @@ public class RegisterAccount extends AppCompatActivity {
         progressBar=findViewById(R.id.progressBar2);
         auth=FirebaseAuth.getInstance();
         phone=findViewById(R.id.ra_phonereg);
+        f1=findViewById(R.id.random1);
 
         progressBar.setVisibility(View.INVISIBLE);
+        f1.setBoxStrokeColor(Color.WHITE);
+
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

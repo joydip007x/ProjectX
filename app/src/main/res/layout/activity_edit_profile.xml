@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent"
     tools:ignore="NamespaceTypo">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,14 +65,14 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/edit_text_highlight"
                     android:hint="agency name"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textSize="20dp"
-                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/Black"
+                    android:fontFamily="@font/qucisand"
 
                     />
 
@@ -83,7 +84,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="35dp"
                     android:text="Owner's Name"
-                    android:textColor="#000000"
+                    android:textColor="@color/White"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -96,7 +97,7 @@
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="5dp"
                     android:inputType="text"
-                    android:textColor="#000000"
+                    android:textColor="@color/Black"
                     android:background="@drawable/edit_text_highlight"
                     android:textSize="20dp" />
 
@@ -108,7 +109,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:text="Address"
-                    android:textColor="#000000"
+                    android:textColor="@color/White"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -133,8 +134,9 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:text="Description"
-                    android:textColor="#000000"
+                    android:textColor="@color/White"
                     android:textSize="20dp"
+
                     android:textStyle="bold"
                     android:visibility="visible" />
 
@@ -160,7 +162,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:text="Contact Number"
-                    android:textColor="#000000"
+                    android:textColor="@color/White"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -185,7 +187,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:text="Opening &amp; Closing Hour (24H Format) "
-                    android:textColor="#000000"
+                    android:textColor="@color/White"
                     android:textStyle="bold"
                     android:textSize="18dp" />
 
@@ -231,9 +233,12 @@
                         android:layout_marginBottom="32dp"
                         android:forceHasOverlappingRendering="true"
                         android:text="Submit"
+                        app:strokeColor="@color/White"
+                        app:strokeWidth="2dp"
                         android:textAlignment="textEnd"
                         android:textSize="20dp"
                         android:textStyle="bold"
+                        android:textColor="@color/White"
                         android:visibility="visible"
                         tools:ignore="RtlCompat" />
 

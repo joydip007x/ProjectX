@@ -10,7 +10,6 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        app:strokeColor="@color/errorColor"
         app:strokeWidth="1dp"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp">
@@ -63,9 +62,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:id="@+id/list_chlid2_order"
-                        android:text="ok"
-                        android:textSize="13sp"
-                        android:fontFamily="@font/roboto_regular"
+                        android:text="100"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_boldi"
                         android:textColor="#F06A90B5"
                         android:layout_height="wrap_content" />
 

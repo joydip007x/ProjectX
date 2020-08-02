@@ -37,7 +37,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:text="Food Menu1"
-                        android:textColor="#fdb501"
+                        android:textColor="@color/Black"
                         android:layout_weight="5"
                         android:textSize="20sp" />
 
@@ -63,9 +63,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:id="@+id/list_chlid2"
-                        android:text="ok"
-                        android:textSize="13sp"
-                        android:fontFamily="@font/roboto_regular"
+                        android:text="100"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_boldi"
                         android:textColor="#F06A90B5"
                         android:layout_height="wrap_content" />
 

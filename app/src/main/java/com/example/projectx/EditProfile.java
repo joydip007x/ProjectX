@@ -48,7 +48,7 @@ public class EditProfile extends AppCompatActivity {
         TVemail.setText(prof.getTime());
         TVdescription.setText(prof.getDes());
         TVaddress.setText(prof.getAddress());
-        adaTV.setText(prof.getResName());
+
 
         mbt.setOnClickListener(new View.OnClickListener() {
             @Override
