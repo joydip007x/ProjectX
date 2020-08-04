@@ -15,27 +15,36 @@
         android:layout_marginBottom="449dp">
 
 
+        <ImageView
+            android:id="@+id/applogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="89dp"
+            android:layout_marginEnd="173dp"
+            android:background="@mipmap/ic_launcher" />
 
-            <com.github.ybq.android.spinkit.SpinKitView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="Joldi Cook"
+            android:fontFamily="@font/qucisand"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+
+        <com.github.ybq.android.spinkit.SpinKitView
             style="@style/SpinKitView.Large.PulseRing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            app:SpinKit_Color="@color/colorAccent"
-            />
+            app:SpinKit_Color="@color/colorAccent" />
 
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:paddingRight="10dp"
-            android:textAppearance="@font/qucisand"
-            android:text="Joldi Cook"
-            android:textSize="25sp"
-        />
 
 
     </RelativeLayout>
@@ -76,6 +85,8 @@
             app:boxStrokeColor="@color/White"
             app:boxStrokeWidth="2dp"
             app:errorEnabled="true"
+            app:hintTextColor="@color/White"
+            android:textColorHint="@color/White"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -96,6 +107,8 @@
             android:layout_marginTop="120dp"
             android:hint="Password"
             app:boxStrokeColor="@color/White"
+            android:textColorHint="@color/White"
+            app:hintTextColor="@color/White"
             app:boxStrokeWidth="2dp"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
@@ -125,7 +138,7 @@
             android:layout_marginTop="102dp"
             android:layout_marginEnd="154dp"
             android:text="Sign in"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/white" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -142,16 +155,14 @@
             android:id="@+id/ma_forgot"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="186dp"
-            android:textColor="@color/White"
             android:layout_height="52dp"
             android:layout_alignTop="@+id/outlinedTextField2"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-
             android:layout_marginTop="45dp"
+
             android:layout_marginEnd="203dp"
-            android:layout_marginBottom="238dp"
-            android:text="Forgot password?" />
+            android:text="Forgot password?"
+            android:textColor="@color/White" />
 
 
     </RelativeLayout>

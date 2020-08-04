@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".CartConfirmOrder">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/firstrelative"
+        android:background="#60FFFFFF"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_icon"
+            android:background="@drawable/ic_baseline_stars_24"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordered By :"
+            android:layout_toEndOf="@id/order_icon"
+            android:id="@+id/ordered_by"
+            android:textSize="25sp"
+            android:textColor="@color/White"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/roboto_bold"
+            />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:paddingLeft="10dp"
+             android:paddingTop="20dp"
+             android:background="@color/material_on_primary_disabled"
+
+             android:id="@+id/firstline"
+             android:layout_below="@id/ordered_by"
+             android:layout_height="wrap_content">
+
+             <TextView
+
+                 android:layout_width="160dp"
+                 android:layout_height="wrap_content"
+                 android:text="userName"
+                 android:textColor="@color/White"
+                 android:id="@+id/cart_name"
+                 android:fontFamily="@font/qucisand"
+                 android:textSize="20sp"/>
+             <TextView
+                 android:id="@+id/cart_number"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="+8801673667870"
+                 android:textColor="@color/White"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="15sp"
+                 android:autoLink="phone"
+                 android:fontFamily="@font/roboto_bold"
+                 android:background="@color/material_on_primary_disabled"
+                 android:gravity="left"
+                 android:linksClickable="true"
+                 />
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstline"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cart_address"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="Full Length Address"
+                android:textSize="17sp"
+                android:textColor="@color/White"
+                android:fontFamily="@font/roboto_black"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/second_realtive"
+        android:layout_below="@id/firstrelative"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/promo_icon"
+            android:background="@drawable/ic_baseline_double_arrow_24"
+            android:padding="5dp"
+            android:layout_marginTop="6dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promo Code:"
+            android:layout_toEndOf="@id/promo_icon"
+            android:id="@+id/promouse"
+            android:textSize="20sp"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:padding="5dp"
+            android:fontFamily="@font/roboto_bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:id="@+id/firstline2"
+            android:layout_below="@id/promouse"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promocode"
+            android:id="@+id/cart_promo_name"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/cart_promotk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0TK"
+            android:textColor="@color/White"
+            android:textSize="15sp"
+            
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="right"
+            android:layout_marginLeft="250dp"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/third_relative"
+        android:layout_below="@id/second_realtive"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="15dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/fixedproperty"
+            android:background="@color/material_on_primary_disabled"
+
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/fixed2"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/rider_image"
+                android:fontFamily="@font/qucisand"
+                android:padding="10dp"
+                android:text="Item name "
+                android:textColor="@color/White"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_item_name"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/fixed2"
+                android:fontFamily="@font/qucisand"
+                android:padding="10dp"
+                android:text="Unit"
+                android:textColor="@color/White"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp"
+                android:padding="10dp"
+                android:text="Unit Price"
+                android:fontFamily="@font/qucisand"
+                android:textSize="12dp"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+
+                />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/fixedproperty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:background="@color/White"
+            android:scrollbars="vertical"
+            android:id="@+id/cart_recycle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/third_relative"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/fixedproperty2"
+            android:background="@color/material_on_primary_disabled"
+
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/fixed3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/rider_image"
+                android:fontFamily="@font/qucisand"
+                android:text="Total Payable"
+                android:textColor="@color/White"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_item_name"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toEndOf="@id/fixed3"
+                android:fontFamily="@font/qucisand"
+                android:text="Promo"
+                android:id="@+id/cart_finalpromo"
+                android:textColor="@color/White"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp"
+                android:text="0000tk"
+                android:id="@+id/cart_total"
+                android:fontFamily="@font/qucisand"
+                android:textSize="15dp"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/cart_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="38dp"
+            android:text="Accept Order" />
+
+        <Button
+            android:id="@+id/cart_reject"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="263dp"
+            android:textColor="@color/White"
+            android:layout_marginBottom="36dp"
+            android:text="Reject Order" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

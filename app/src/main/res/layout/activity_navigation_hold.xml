@@ -10,6 +10,11 @@
     <com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:navigationDrawerBackgroundColor="@color/colorAccent"
+        app:HamMenuIconTintColor="@color/Black"
+        app:appbarColor="#7885C0"
+        app:primaryMenuItemTextColor="@color/White"
+        app:secondaryMenuItemTextColor="@color/White"
         android:id="@+id/navigationDrawer">
         <FrameLayout
             android:id="@+id/frameLayout"

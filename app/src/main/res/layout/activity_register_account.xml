@@ -17,6 +17,8 @@
         android:layout_height="wrap_content"
         app:boxStrokeColor="@color/White"
         app:boxStrokeWidth="2dp"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         android:defaultFocusHighlightEnabled="true"
         android:hint="UserEmail"
         android:paddingLeft="50dp"
@@ -39,6 +41,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         android:layout_alignTop="@+id/random1"
         android:layout_marginTop="67dp"
         android:hint="Password"
@@ -62,6 +66,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         android:layout_alignTop="@+id/random1"
         app:boxStrokeColor="@color/White"
         app:boxStrokeWidth="2dp"
@@ -88,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/random1"
         android:layout_alignParentEnd="true"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_marginTop="199dp"
         android:layout_marginEnd="162dp"
@@ -104,4 +110,5 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="147dp"
         android:layout_marginEnd="170dp" />
+
 </RelativeLayout>

@@ -96,7 +96,7 @@ public class MainAdapter extends BaseExpandableListAdapter {
 
         String child= (String) getChild(groupPosition,childPosition);
         if(child.equals("null")) return convertView;
-        String child2=  child.substring(child.indexOf("|")+1).trim();
+        String child2=  child.substring(child.indexOf("|")+1).trim().concat(" BDT ");
         child=child.substring(0, child.indexOf("|"));
 
         if(convertView==null){
@@ -116,6 +116,7 @@ public class MainAdapter extends BaseExpandableListAdapter {
         ibutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 term= (String) getChild(groupPosition,childPosition);
                 System.out.println(" LAAL TERM "+term);
@@ -179,22 +180,3 @@ public class MainAdapter extends BaseExpandableListAdapter {
     }
 }
 
-//{
-//    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(UtilitiesX.UID).child("Orders").child(postUID);
-//                databaseReference.setValue(M);
-//        String postUID=FirebaseDatabase.getInstance().getReference("Restaurant").child(UtilitiesX.UID)
-//        .child("Orders")
-//        .push().getKey().toString();
-//
-//        HashMap M=new HashMap();
-//        M.put("UID",UtilitiesX.UID);
-//        ArrayList<Pair<String, Integer>>A=new ArrayList<>();
-//        A.add(new Pair<>("DAL", 2)) ;
-//        A.add(new Pair<>("VAT", 2)) ;
-//        M.put("Foodlist",A);
-//        M.put("RIDER","none");
-//        M.put("Address","none");
-//        M.put("STATUS","Awaiting");
-//        M.put("PostUID",postUID);
-//
-//}

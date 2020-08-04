@@ -20,18 +20,17 @@ public class OrderReceiver {
 
         String p=null;
         ArrayList<Pair<String,Integer >>A= (ArrayList<Pair<String, Integer>>) serve.get("Foodlist");
-        System.out.println("LAAL "+ " LOL "+A.toString());
+     ////   System.out.println("LAAL "+ " LOL "+A.toString());
         Iterator i = A.iterator();
         int cnt=0;
         while (i.hasNext()) {
 
             HashMap q= (HashMap)  i.next();
-            System.out.println("LAAL "+q+ (++cnt));
-            if(p==null) p=(q.get("first").toString());
-            else p=p.concat( ",").concat(q.get("first").toString()).concat(" and...");
+          ///  System.out.println("LAAL "+q+ (++cnt));
+            if(p==null) p=(q.get("first").toString().split("[|]")[0]);
+            else p=p.concat( ",").concat(q.get("first").toString().split("[|]")[0]).concat(" and...");
         }
-        System.out.println("LAAL "+p);
-        int len=17
+        int len=17;
         if(p.length()>len)p=p.substring(0,len-1).concat("...");
         return p;
     }
@@ -48,6 +47,10 @@ public class OrderReceiver {
 
         return String.valueOf(r);
     }
+    public String getPhone(){
+
+          return  this.serve.get("Phone").toString();
+    }
     public int orderType(){
 
          if(this.serve.get("STATUS").toString().equals("Awaiting"))return  0;
@@ -60,8 +63,12 @@ public class OrderReceiver {
     }
     public String titleDisplay(){
 
-        return this.getName().concat("|").concat( this.Money()).concat("|").concat(this.serve.get("PostUID").toString());
+        return this.getName().concat("|").concat( this.getPhone()).concat("|").concat(this.serve.get("PostUID").toString());
     }
 
 
+    public String getRiderUID() {
+
+        return  this.serve.get("RIDERUID").toString();
+    }
 }

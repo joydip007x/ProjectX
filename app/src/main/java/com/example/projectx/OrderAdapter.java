@@ -114,22 +114,27 @@ public class OrderAdapter extends BaseExpandableListAdapter {
         if(groupPosition==0){
             i.setVisibility(View.INVISIBLE);
             mbtn.setVisibility(View.VISIBLE);
+            mbtn.setText("ACCEPT ORDER");
         }
         if(groupPosition==2){
-            i.setImageDrawable(convertView.getResources().getDrawable(R.drawable.ic_baseline_check_24_comp));
-            mbtn.setVisibility(View.GONE);
+            ///i.setImageDrawable(convertView.getResources().getDrawable(R.drawable.ic_baseline_check_24_comp));
+            mbtn.setText("Order History");
         }
         if(groupPosition==1) {
-            i.setImageDrawable(convertView.getResources().getDrawable(R.drawable.ic_baseline_add_to_queue_24));
-            mbtn.setVisibility(View.GONE);
+            ///i.setImageDrawable(convertView.getResources().getDrawable(R.drawable.ic_baseline_add_to_queue_24));
+            i.setVisibility(View.INVISIBLE);
+            mbtn.setText("UPDATE ORDER");
         }
+
         mbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i=new Intent(v.getContext(),EmptyDemo.class);
+                Intent i=new Intent(v.getContext(), CartConfirmOrder.class);
                 i.putExtra("postUID",postUID);
+                i.putExtra("gPos",String.valueOf(groupPosition));
                 context.startActivity(i);
+
             }
         });
 
@@ -143,3 +148,29 @@ public class OrderAdapter extends BaseExpandableListAdapter {
     }
 
 }
+//{
+//
+//
+//        String postUID=FirebaseDatabase.getInstance().getReference("Restaurant").child(UtilitiesX.UID)
+//        .child("Orders")
+//        .push().getKey().toString();
+//
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Restaurant").child(UtilitiesX.UID).child("Orders").child(postUID);
+//        HashMap M=new HashMap();
+//        M.put("UID",UtilitiesX.UID);
+//        ArrayList<Pair<String, Integer>>A=new ArrayList<>();
+//        A.add(new Pair<>("DAL", 2)) ;
+//        A.add(new Pair<>("VAT", 2)) ;
+//        M.put("Foodlist",A);
+//        M.put("RIDER","none");
+//        M.put("RIDERUID","none");
+//        M.put("PromoCode","none");
+//        M.put("Promotk","none");
+//        M.put("Ordered_by","none");
+//        M.put("Address","none");
+//        M.put("Phone","none");
+//        M.put("STATUS","Awaiting");
+//        M.put("PostUID",postUID);
+//
+//        databaseReference.setValue(M);
+//  }

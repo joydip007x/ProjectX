@@ -29,15 +29,13 @@ import java.util.TreeSet;
 
 public class Orders extends Fragment {
 
-    private Button buttoncfu,buttoncad, buttonrap;
+    private Button buttonref;
     ExpandableListView expandableListView;
-     List<String>listgroup,L0,L2,L1;
+    static List<String>listgroup,L0,L2,L1;
     ExtendedFloatingActionButton efab;
     HashMap<String, List<String> > listitem;
     ArrayList<Pair<String,String>>Store;
     Set<String> CatName;
-
-
 
 
     int LAUNCH_SECOND_ACTIVITY = 1;
@@ -57,6 +55,8 @@ public class Orders extends Fragment {
 
         expandableListView=v.findViewById(R.id.expandable_listvieworder);
 
+
+
        // alertDialog=startLoading2(v,alertDialog);
 
         listgroup=new ArrayList<>();
@@ -73,12 +73,13 @@ public class Orders extends Fragment {
         expandableListView.setAdapter(orderAdapter);
 
 
-        readData(db, new OnGetDataListener() {
 
+        final OnGetDataListener OG=new OnGetDataListener() {
             @Override
             public void onSuccess(String reg) {
                 //alertDialog.dismiss();
                 initListData(0, reg);
+
             }
 
             @Override
@@ -90,7 +91,9 @@ public class Orders extends Fragment {
             public void onFailure() {
 
             }
-        });
+        };
+        readData(db, OG);
+
         return  v;
     }
 

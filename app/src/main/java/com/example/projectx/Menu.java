@@ -56,8 +56,8 @@ public class Menu extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
 
 
-
     }
+
 
 
     @Nullable
@@ -69,11 +69,13 @@ public class Menu extends Fragment {
 
         expandableListView=v.findViewById(R.id.expandable_listview);
         efab=v.findViewById(R.id.extended_fab);
+
+
+
         listgroup=new ArrayList<>();
         listitem=new HashMap<>();
         Store=new ArrayList<>();
         CatName=new TreeSet<>();
-
 
         db=FirebaseDatabase.getInstance().getReference("Restaurant").child(UtilitiesX.UID).child("FoodMenu");
 
@@ -89,15 +91,11 @@ public class Menu extends Fragment {
         mainAdapter= new MainAdapter(getContext());
         expandableListView.setAdapter(mainAdapter);
 
-       // alertDialog=startLoading(v,alertDialog);
-       /// System.out.println("LAAAL  here "+ UtilitiesX.UID);
 
-        readData(db, new OnGetDataListener() {
-
+        final OnGetDataListener OGD=new OnGetDataListener() {
             @Override
             public void onSuccess(String reg) {
                 initListData(0, reg);
-                //alertDialog.dismiss();
             }
 
             @Override
@@ -109,7 +107,9 @@ public class Menu extends Fragment {
             public void onFailure() {
 
             }
-        });
+        };
+        readData(db,OGD);
+
 
         return  v;
     }

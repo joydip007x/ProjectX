@@ -57,6 +57,8 @@
             android:hint="Your Email"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
+            android:textColorHint="@color/White"
+            app:hintTextColor="@color/White"
             app:boxStrokeColor="@color/White"
             app:boxStrokeWidth="2dp"
 

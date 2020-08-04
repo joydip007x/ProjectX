@@ -13,7 +13,7 @@
         <activity android:name=".EditProfile"></activity>
         <activity android:name=".RiderManagement" />
         <activity android:name=".RiderRegister" />
-        <activity android:name=".EmptyDemo" />
+        <activity android:name=".CartConfirmOrder" />
         <activity android:name=".NavigationHolder" />
         <activity android:name=".AddItemToCart" />
         <activity android:name=".ForgotPass" />

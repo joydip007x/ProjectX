@@ -21,6 +21,8 @@
         app:errorEnabled="true"
         app:boxStrokeColor="@color/White"
         app:boxStrokeWidth="2dp"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         app:startIconDrawable="@drawable/ic_baseline_fastfood_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -45,6 +47,8 @@
         android:hint="Phone "
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         app:helperTextEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_call_24"
         >

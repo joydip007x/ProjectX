@@ -15,6 +15,8 @@
         app:boxStrokeColor="@color/White"
         app:boxStrokeWidth="2dp"
         android:hint="Item Name"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         app:errorEnabled="true"
@@ -34,6 +36,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         android:layout_alignTop="@+id/outlinedTextField"
         android:layout_marginTop="70dp"
         app:boxStrokeColor="@color/White"
@@ -59,6 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeColor="@color/White"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         app:boxStrokeWidth="2dp"
         android:layout_alignTop="@+id/outlinedTextField"
         android:layout_marginTop="148dp"
@@ -79,6 +85,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextFieldDesc"
         app:boxStrokeColor="@color/White"
+        android:textColorHint="@color/White"
+        app:hintTextColor="@color/White"
         app:boxStrokeWidth="2dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -109,5 +117,5 @@
         android:layout_marginTop="358dp"
         android:layout_marginEnd="159dp"
         android:text="Add"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/white" />
 </RelativeLayout>
