@@ -10,7 +10,12 @@
     >
 
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,6 +34,8 @@
         </ExpandableListView>
 
     </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </RelativeLayout>

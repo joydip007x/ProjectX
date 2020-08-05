@@ -8,11 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +28,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+
+import es.dmoral.toasty.Toasty;
 
 public class Orders extends Fragment {
 
@@ -55,9 +59,10 @@ public class Orders extends Fragment {
 
         expandableListView=v.findViewById(R.id.expandable_listvieworder);
 
+        final SwipeRefreshLayout swipeContainer =  v.findViewById(R.id.swipeContainer);
 
-
-       // alertDialog=startLoading2(v,alertDialog);
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light, android.R.color.holo_orange_light, android.R.color.holo_red_light);
+    // alertDialog=startLoading2(v,alertDialog);
 
         listgroup=new ArrayList<>();
         listgroup.add("Awaiting");
@@ -73,12 +78,11 @@ public class Orders extends Fragment {
         expandableListView.setAdapter(orderAdapter);
 
 
-
         final OnGetDataListener OG=new OnGetDataListener() {
             @Override
             public void onSuccess(String reg) {
-                //alertDialog.dismiss();
                 initListData(0, reg);
+                swipeContainer.setRefreshing(false);
 
             }
 
@@ -93,6 +97,17 @@ public class Orders extends Fragment {
             }
         };
         readData(db, OG);
+
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                Toasty.info(getContext(), "REFRESHING ...", Toast.LENGTH_SHORT, true).show();
+                readData(db, OG);
+            }
+
+        });
+
 
         return  v;
     }
