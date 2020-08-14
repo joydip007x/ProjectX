@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EditProfile"></activity>
-        <activity android:name=".RiderManagement" />
+        <activity android:name=".RiderManagement"
+            tools:ignore="Instantiatable" />
         <activity android:name=".RiderRegister" />
         <activity android:name=".CartConfirmOrder" />
         <activity android:name=".NavigationHolder" />

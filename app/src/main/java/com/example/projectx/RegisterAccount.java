@@ -82,9 +82,11 @@ public class RegisterAccount extends AppCompatActivity {
 
                 if(task.isSuccessful()){
 
+               ////     System.out.println("LAAL CREATE "+ FirebaseAuth.getInstance().getUid());
                     Toasty.success(RegisterAccount.this, "Registered!", Toast.LENGTH_SHORT, true).show();
                     Intent i=new Intent(  RegisterAccount.this, MainActivity1.class);
                     i= UtilitiesX.CloseAllPreviousCallStack(i);
+                    FirebaseAuth.getInstance().signOut();
                     startActivity(i);
                 }
                 else {
